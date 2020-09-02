@@ -233,7 +233,7 @@ class ModuleFinder(object):
                 if res is not None:
                     return res
             raise
-        expect OSError as e:
+        except OSError as e:
             if e.errno == 2:
                 raise ImportError
             raise
